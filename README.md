@@ -1,15 +1,15 @@
-# ⚡ FitMind AI \u2014 Personal Fitness Tracker
+# ⚡ FitMind AI — Personal Fitness Tracker
 
 FitMind is an intelligent, locally-persistent web application designed to act as your personalized fitness coach. Built with React and TypeScript, it leverages the **Google Gemini API** to generate structured, adaptive workout plans and provide conversational coaching experiences directly in your browser.
 
-## \u2728 Features
+## ✨ Features
 
-- **\ud83e\udd16 AI-Powered Plan Generation:** Complete a comprehensive onboarding flow that determines your Maintenance Calories (TDEE), Target Calories, Equipment Tier, and Experience. FitMind queries Gemini to dynamically stitch together an optimal weekly schedule from a predefined library of 15+ fitness modules.
-- **\ud83d\udcac Conversational AI Coach:** Chat with your AI trainer directly in the app. Using structured tool calls, the AI can securely update your plan, log workouts on your behalf, and provide nutritional guidance within strict safety guardrails (e.g., preventing extreme caloric deficits or dangerous exercises).
-- **\ud83d\udd12 Fully Local, Zero Database Backend:** Your data stays with you. User profiles, workout logs, chat histories, and active plans are mapped to strict JSON schemas and persisted securely in your browser's `localStorage`.
-- **\ud83c\udfa8 Premium Dark-Mode Aesthetics:** A glassmorphic, fluid UI with a Charcoal Base (`#0f0f0f`), Electric Green (`#00ff87`), and Deep Indigo (`#6366f1`) color palette built completely with Tailwind CSS.
+- **🤖 AI-Powered Plan Generation:** Complete a comprehensive onboarding flow that determines your Maintenance Calories (TDEE), Target Calories, Equipment Tier, and Experience. FitMind queries Gemini to dynamically stitch together an optimal weekly schedule from a predefined library of 15+ fitness modules.
+- **💬 Conversational AI Coach:** Chat with your AI trainer directly in the app. Using structured tool calls, the AI can securely update your plan, log workouts on your behalf, and provide nutritional guidance within strict safety guardrails (e.g., preventing extreme caloric deficits or dangerous exercises).
+- **🔒 Fully Local, Zero Database Backend:** Your data stays with you. User profiles, workout logs, chat histories, and active plans are mapped to strict JSON schemas and persisted securely in your browser's `localStorage`.
+- **🎨 Premium Dark-Mode Aesthetics:** A glassmorphic, fluid UI with a Charcoal Base (`#0f0f0f`), Electric Green (`#00ff87`), and Deep Indigo (`#6366f1`) color palette built completely with Tailwind CSS.
 
-## \ud83d\udee0\ufe0f Tech Stack
+## 🛠️ Tech Stack
 
 - **Framework:** React 18 + Vite
 - **Language:** TypeScript
@@ -17,7 +17,7 @@ FitMind is an intelligent, locally-persistent web application designed to act as
 - **AI Integration:** `@google/genai` (Gemini SDK)
 - **Data Layer:** Client-side `localStorage` wrapper
 
-## \ud83d\ude80 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 Make sure you have Node.js (v18+) installed.
@@ -42,12 +42,12 @@ npm run dev
 ```
 Navigate to `http://localhost:5173/` in your browser.
 
-## \u2696\ufe0f Intelligent Guardrails
+## ⚖️ Intelligent Guardrails
 FitMind enforces mechanical safeguards before passing information to the LLM:
 - **Calorie Floor:** Hardcoded minimum thresholds (1300kcal for women, 1500kcal for men) completely prevent the AI from generating dangerous weight loss macros.
 - **Module Library Routing:** Beginners are securely sandboxed. Advanced modules and heavier equipment tiers are stripped from the 'Eligible Library' array before Gemini ever attempts to craft a plan, eliminating hallucinated injuries.
 
-## \ud83d\udcc1 File Structure Highlights
+## 📁 File Structure Highlights
 
 - `src/components/Tabs/` - The core tab logic (`DashboardTab`, `AICoachTab`, `CalendarTab`, `ProfileTab`).
 - `src/data/moduleLibrary.ts` - The localized fitness regimen objects and the `filterModules` engine mapping AI goal vectors to raw data.
